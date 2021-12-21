@@ -13,7 +13,7 @@ reg [7:0] reg_plaintext, reg_ciphertext, reg_decryptedtext;
 S_DES_encryption SDESen(reg_plaintext[7:0], key[9:0], S0[31:0], S1[31:0], ct[7:0]);
 S_DES_decryption SDESde(ct[7:0], key[9:0], S0[31:0], S1[31:0], dt[7:0]); 
 
-always @ (posedge clk)
+always @(posedge clk or negedge reset)
 begin
 	if(~reset)
 	begin

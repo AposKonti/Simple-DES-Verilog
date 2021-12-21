@@ -3,7 +3,7 @@ module S_DES_decryption(plaintext, key, S0, S1, decryptedtext);
 input [7:0] plaintext;                                                  //The plain text
 input [9:0] key;                                                        //10-bit Key
 input [31:0] S0, S1;                                                    //S-Boxes
-output [7:0] decryptedtext;                                                //The resulted cipher text
+output [7:0] decryptedtext;                                                //The resulted deciphered text
 
 wire [7:0] IP, IP_1, K1, K2;                                            //IP <= Initial Permutation, K1 <= Key 1, K2 <= Key 2
 wire [7:0] res1,sw,res2;
